@@ -8,3 +8,20 @@ To install it, simply fork this repository and create an application from your G
 Then create a MongoDB add-on and link it to your application.
 
 That's it, the application will use the environnement variables to connect to MongoDB.
+
+NOTED:
+
+This repositoty I already created the Dockerfile. you can follow the docker file if you want try that
+
+How to use the build the images
+
+
+docker built -t name:tag .
+
+I already had the docker repositoty if you want to try 
+
+
+https://cloud.docker.com/repository/docker/atisak/demo-nodejs
+
+
+
