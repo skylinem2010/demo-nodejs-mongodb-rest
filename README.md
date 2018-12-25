@@ -17,6 +17,8 @@ How to use the build the images
 
 docker built -t name:tag .
 
+docker push to hub.docker
+
 I already had the docker repositoty also. if you want to try 
 
 https://cloud.docker.com/repository/docker/atisak/demo-nodejs
