@@ -19,7 +19,6 @@ docker built -t name:tag .
 
 I already had the docker repositoty also. if you want to try 
 
-
 https://cloud.docker.com/repository/docker/atisak/demo-nodejs
 
 
