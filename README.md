@@ -11,14 +11,13 @@ That's it, the application will use the environnement variables to connect to Mo
 
 NOTED:
 
-This repositoty I already created the Dockerfile. you can follow the docker file if you want try that
+This repositoty I already created the Dockerfile. you can follow the dockerfile. if you want try that
 
 How to use the build the images
 
-
 docker built -t name:tag .
 
-I already had the docker repositoty if you want to try 
+I already had the docker repositoty also. if you want to try 
 
 
 https://cloud.docker.com/repository/docker/atisak/demo-nodejs
