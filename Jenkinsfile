@@ -6,7 +6,7 @@ pipeline {
 
     environment {
         image = "atisak/demo-nodejs"
-        registry = "hub.docker.com"
+        registry = "docker.io"
     }
 
     stages {
