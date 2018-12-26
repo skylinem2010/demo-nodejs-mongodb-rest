@@ -5,7 +5,7 @@ pipeline {
     }
 
     environment {
-        docker-compose-file = web-docker-compose.yml
+        composefile = web-docker-compose.yml
     }
 
 
@@ -26,13 +26,13 @@ pipeline {
 
         stage('Docker-compose pull new images') {
             steps {
-                sh "docker-compose -f ${env.docker-compose-file}  pull"
+                sh "docker-compose -f ${env.composefile}  pull"
 	    }
 	}
 
         stage('Docker-compose start web') {
             steps {
-                sh "docker-compose -f ${env.docker-compose-file}  up -d"
+                sh "docker-compose -f ${env.composefile}  up -d"
             }
         }
 
