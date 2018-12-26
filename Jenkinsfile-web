@@ -1,0 +1,41 @@
+pipeline {
+
+    agent {
+        label 'master'
+    }
+
+    environment {
+        docker-compose-file = web-docker-compose.yml
+    }
+
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Print Environment') {
+            steps {
+                sh('ls -al')
+                sh('printenv')
+            }
+        }
+
+        stage('Docker-compose pull new images') {
+            steps {
+                sh "docker-compose -f ${env.docker-compose-file}  pull"
+	    }
+
+        stage('Docker-compose start web') {
+            steps {
+                sh "docker-compose -f ${env.docker-compose-file}  up -d"
+            }
+        }
+
+
+    }
+}
+
