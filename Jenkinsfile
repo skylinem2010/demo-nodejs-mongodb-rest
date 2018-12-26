@@ -29,7 +29,7 @@ pipeline {
                 script {
                     docker.withRegistry("https://${env.registry}", "docker hub") {
                         def slackImage = docker.build("${env.image}:${BUILD_NUMBER}")
-                        slackImage.push('latest')
+                        slackImage.push()
                     }
                 }
             }
