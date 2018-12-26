@@ -52,7 +52,12 @@ pipeline {
                 sh('docker images')
             }
         }
-
+        
+        stage('Build docker-compose Job for start Web') {
+            steps {
+               build job: 'StartImage'
+            }
+        }
     }
 }
 
