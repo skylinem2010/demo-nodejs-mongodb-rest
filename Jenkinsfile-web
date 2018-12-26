@@ -5,7 +5,7 @@ pipeline {
     }
 
     environment {
-        composefile = web-docker-compose.yml
+        composefile = "web-docker-compose.yml"
     }
 
 
