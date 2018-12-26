@@ -37,7 +37,7 @@ pipeline {
         
         stage('push docker image') {
             steps {
-               sh('docker push ${env.image}:latest')
+               sh "docker push ${env.image}:latest"
             }
         }
 
