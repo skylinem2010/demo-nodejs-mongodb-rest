@@ -8,7 +8,7 @@
   command: docker build -f /tmp/demo-nodejs-mongodb-rest/Dockerfile -t atisak/demo-nodejs /tmp/demo-nodejs-mongodb-rest
 
 - name: Docker tag images
-  command: docker tag atisak/demo-nodejs:{{ tagnumber }} atisak/demo-nodejs:latest
+  command: docker tag atisak/demo-nodejs:"{{ tagnumber }}" atisak/demo-nodejs:latest
 
 - name: Docker push
   command: docker push atisak/demo-nodejs:latest 
