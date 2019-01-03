@@ -12,15 +12,3 @@
 
 - name: Docker push
   command: docker push atisak/demo-nodejs:latest 
-
-  - name: check file
-    find:
-      paths: /tmp/demo-nodejs-mongodb-rest
-      patterns: *
-    register: files_to_delete
-
-  - name: clen up
-    file:
-      path: "{{ item.path }}"
-      state: absent
-    with_items: "{{ files_to_delete.files }}"
