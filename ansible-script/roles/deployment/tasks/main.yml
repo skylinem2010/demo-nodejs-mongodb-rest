@@ -15,7 +15,9 @@
   command: docker-compose -f /tmp/docker-compose.yml up -d
 
 - name: clean up
-  command: rm -rf /tmp/docker-compose.yml
-
+  file: 
+    path: /tmp/docker-compose.yml
+    state: absent
+    
 
   

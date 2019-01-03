@@ -13,5 +13,8 @@
 - name: Docker push
   command: docker push atisak/demo-nodejs:latest 
 
-- name: remove tmp
-  command: rm -rf /tmp/demo-nodejs-mongodb-rest
+- name: clean up
+  file: 
+    path: /tmp/demo-nodejs-mongodb-rest/
+    state: absent
+    recurse: yes
