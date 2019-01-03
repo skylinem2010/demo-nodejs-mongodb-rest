@@ -1,2 +1,3 @@
 - hosts: web_server
-  roles: "{{ state }}"
+  roles: 
+    - "{{ state }}"
