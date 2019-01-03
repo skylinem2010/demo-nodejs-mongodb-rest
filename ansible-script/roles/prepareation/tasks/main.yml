@@ -13,8 +13,14 @@
 - name: Docker push
   command: docker push atisak/demo-nodejs:latest 
 
-- name: clean up
-  file: 
-    path: /tmp/demo-nodejs-mongodb-rest/
-    state: absent
-    recurse: yes
+  - name: Ansible delete file glob
+    find:
+      paths: /tmp/demo-nodejs-mongodb-rest
+      patterns: *
+    register: files_to_delete
+
+  - name: Ansible remove file glob
+    file:
+      path: "{{ item.path }}"
+      state: absent
+    with_items: "{{ files_to_delete.files }}"
