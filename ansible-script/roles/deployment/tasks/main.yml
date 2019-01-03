@@ -1,0 +1,3 @@
+- name: build docker images
+  command: docker build -t { t}
+  

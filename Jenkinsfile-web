@@ -27,7 +27,7 @@ pipeline {
         stage('Docker-compose pull new images') {
             steps {
                 sh "docker-compose -f ${env.composefile}  pull"
-	    }
+	        }
 	}
 
         stage('Docker-compose start web') {
