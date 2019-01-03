@@ -5,7 +5,7 @@
     version: master
 
 - name: Build docker images
-  command: docker build -f /tmp/demo-nodejs-mongodb-rest/Dockerfile -t atisak/demo-nodejs:"{{ tagnumber }}" /tmp/demo-nodejs-mongodb-rest
+  command: docker build -f /tmp/demo-nodejs-mongodb-rest/Dockerfile -t atisak/demo-nodejs:"{{ tagnumber }}"s /tmp/demo-nodejs-mongodb-rest
 
 - name: Docker tag images
   command: docker tag atisak/demo-nodejs:"{{ tagnumber }}" atisak/demo-nodejs:latest
