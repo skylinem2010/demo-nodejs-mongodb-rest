@@ -59,11 +59,11 @@ pipeline {
         //     }
         // }
         
-        // stage('Build docker-compose Job for start Web') {
-        //     steps {
-        //        build job: 'StartImage'
-        //     }
-        // }
+        stage('Build docker-compose Job for start Web') {
+            steps {
+               build job: 'StartImage'
+            }
+        }
     }
 }
 
