@@ -1,2 +1,2 @@
-hosts: web-server
-roles: "{{ state }}"
+- hosts: web-server
+  roles: "{{ state }}"
