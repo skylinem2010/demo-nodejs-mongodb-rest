@@ -1,7 +1,7 @@
 - name: git checkout code latest
   git:
     repo: 'https://github.com/atisak/demo-nodejs-mongodb-rest.git'
-    dest: /tmp/
+    dest: /tmp/demo-nodejs-mongodb-rest
     version: master
 
 - name: Build docker images
