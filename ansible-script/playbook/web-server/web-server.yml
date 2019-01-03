@@ -1,2 +1,2 @@
-- hosts: web-server
+- hosts: web_server
   roles: "{{ state }}"
