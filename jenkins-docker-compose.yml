@@ -9,11 +9,10 @@ services:
     - 8080:8080
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock
-    - $(which docker):$(which docker)
-    - $(which docker-compose):$(which docker-compose)
+    - /usr/bin/docker:/usr/bin/docker
+    - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose
     - jenkins-volume:/var/jenkins_home
     - /etc/timezone:/etc/timezone 
-
     logging:
       driver: json-file
       options:
