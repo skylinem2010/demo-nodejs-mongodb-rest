@@ -35,29 +35,30 @@ pipeline {
                 script {
                     docker.withRegistry("https://${env.registry}", "dockerhub") {
                         def slackImage = docker.build("${env.image}:${BUILD_NUMBER}")
-                        //slackImage.push()
+                        slackImage.push()
+                        slackImage.push('latest')
                     }
                 }
             }
         }
 
-        stage('tag docker image') {
-            steps {
-               sh "docker tag ${env.image}:${BUILD_NUMBER} ${env.image}:latest"
-            }
-        }
+        // stage('tag docker image') {
+        //     steps {
+        //        sh "docker tag ${env.image}:${BUILD_NUMBER} ${env.image}:latest"
+        //     }
+        // }
 
-        stage('push docker image') {
-            steps {
-               sh "docker push ${env.image}:latest"
-            }
-        }
+        // stage('push docker image') {
+        //     steps {
+        //        sh "docker push ${env.image}:latest"
+        //     }
+        // }
 
-        stage('Verify new docker image(s)') {
-            steps {
-                sh('docker images')
-            }
-        }
+        // stage('Verify new docker image(s)') {
+        //     steps {
+        //         sh('docker images')
+        //     }
+        // }
         
     }
 }
