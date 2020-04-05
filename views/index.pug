@@ -7,7 +7,7 @@ block content
 
   nav.navbar.navbar-default( role="navigation" )
     .navbar-header
-      a.navbar-brand(href="#") Node JS DeMo V2
+      a.navbar-brand(href="#") Node JS DeMo V3
 
   form.form-inline(align="center" id="createForm" method="post" action="/values")
     div.form-group
@@ -18,7 +18,7 @@ block content
 
   div(align="center")
     ul.list-group(id="list" style="width:400px")
-      li.list-group-item.active DATA
+      li.list-group-item.active values
       each val, uuid in values
         li.list-group-item(id=uuid)
           div(align="right" style="float:right")
